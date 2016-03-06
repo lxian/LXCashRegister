@@ -14,6 +14,8 @@
 		30FC5B571C8C158D0058FA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FC5B561C8C158D0058FA8B /* Assets.xcassets */; };
 		30FC5B5A1C8C158D0058FA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FC5B581C8C158D0058FA8B /* LaunchScreen.storyboard */; };
 		30FC5B651C8C158D0058FA8B /* LXCashRegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B641C8C158D0058FA8B /* LXCashRegisterTests.swift */; };
+		30FC5B781C8C27F80058FA8B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FC5B771C8C27F80058FA8B /* CoreData.framework */; };
+		30FC5B7D1C8C2CD40058FA8B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B7C1C8C2CD40058FA8B /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		30FC5B601C8C158D0058FA8B /* LXCashRegisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXCashRegisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FC5B641C8C158D0058FA8B /* LXCashRegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXCashRegisterTests.swift; sourceTree = "<group>"; };
 		30FC5B661C8C158D0058FA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30FC5B771C8C27F80058FA8B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		30FC5B7C1C8C2CD40058FA8B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = Store/CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FC5B781C8C27F80058FA8B /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 		30FC5B401C8C158D0058FA8B = {
 			isa = PBXGroup;
 			children = (
+				30FC5B771C8C27F80058FA8B /* CoreData.framework */,
 				30FC5B4B1C8C158D0058FA8B /* LXCashRegister */,
 				30FC5B631C8C158D0058FA8B /* LXCashRegisterTests */,
 				30FC5B4A1C8C158D0058FA8B /* Products */,
@@ -80,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */,
+				30FC5B791C8C2C890058FA8B /* Store */,
 				30FC5B4E1C8C158D0058FA8B /* ViewController.swift */,
 				30FC5B501C8C158D0058FA8B /* Main.storyboard */,
 				30FC5B561C8C158D0058FA8B /* Assets.xcassets */,
@@ -97,6 +104,14 @@
 				30FC5B661C8C158D0058FA8B /* Info.plist */,
 			);
 			path = LXCashRegisterTests;
+			sourceTree = "<group>";
+		};
+		30FC5B791C8C2C890058FA8B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				30FC5B7C1C8C2CD40058FA8B /* CoreDataStack.swift */,
+			);
+			name = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FC5B7D1C8C2CD40058FA8B /* CoreDataStack.swift in Sources */,
 				30FC5B551C8C158D0058FA8B /* LXCashRegister.xcdatamodeld in Sources */,
 				30FC5B4F1C8C158D0058FA8B /* ViewController.swift in Sources */,
 				30FC5B4D1C8C158D0058FA8B /* AppDelegate.swift in Sources */,
