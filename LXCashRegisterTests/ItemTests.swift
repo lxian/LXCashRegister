@@ -15,7 +15,7 @@ class ItemTests: XCTestCase {
     static let TestItemJsonDict:[String: AnyObject] = ["barCode": "ITEM9999999",
                             "name": "someItem",
                             "price": 99,
-                            "discount": [
+                            "discounts": [
                                 [
                                     "type": 0,
                                     "offPercent": 5
@@ -39,20 +39,24 @@ class ItemTests: XCTestCase {
         super.tearDown()
     }
     
-    func testItemCreatingFromJson() {
+    func testItemCreationFromJson() {
         let item = Item(json: ItemTests.TestItemJsonDict)
         XCTAssertNotNil(item, "Item Should be created with a valid json")
         
         if let item = item {
-            XCTAssertEqual(item.barCode, ItemTests.TestItemBarCode, "Item property barCode is not created correctly, actual\(item.barCode)")
-            XCTAssertEqual(item.name, ItemTests.TestItemJsonDict["name"] as? String, "Item property name is not created correctly, actual\(item.name)")
-            XCTAssertEqual(item.price, ItemTests.TestItemJsonDict["price"] as? NSNumber, "Item property price is not created correctly, actual\(item.price)")
+            
+            XCTAssertEqual(item.barCode, ItemTests.TestItemBarCode, "Item property barCode is not created correctly, actual \(item.barCode)")
+            XCTAssertEqual(item.name, ItemTests.TestItemJsonDict["name"] as? String, "Item property name is not created correctly, actual \(item.name)")
+            XCTAssertEqual(item.price, ItemTests.TestItemJsonDict["price"] as? NSNumber, "Item property price is not created correctly, actual \(item.price)")
+            
+            XCTAssertNotNil(item.discounts[0] as? BuyTwoGetOneDiscount, "Item property discount[0] (BuyTwoGetOneDiscount) is not created correctly ")
+            XCTAssertEqual((item.discounts[1] as! PercentOffDiscount).offPercent, 5, "Item property discount[0] (PercentOffDiscount)is not created correctly, actual \((item.discounts[1] as! PercentOffDiscount).offPercent)")
         }
         
         createdItems.append(item)
     }
     
-    func testItemCreatingFailingOnInvalidJson() {
+    func testItemCreationFailureOnInvalidJson() {
         ["barCode", "name", "price"].forEach { key in
             var json = ItemTests.TestItemJsonDict
             json.removeValueForKey(key)
