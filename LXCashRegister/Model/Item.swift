@@ -31,7 +31,7 @@ class Item: NSManagedObject {
         self.barCode    = barCode
         self.name       = name
         self.price      = price
-        self.discounts  = Discount.createDiscountArray(json["discounts"])
+        self.discounts  = Discount.createDiscountArray(json: json["discounts"])
     }
     
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {

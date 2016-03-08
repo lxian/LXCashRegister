@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3036515F1C8F0E5300937CFB /* DiscountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3036515E1C8F0E5300937CFB /* DiscountTests.swift */; };
+		303651611C8F101400937CFB /* PercentOffDiscountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303651601C8F101400937CFB /* PercentOffDiscountTest.swift */; };
 		30FC5B4D1C8C158D0058FA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */; };
 		30FC5B4F1C8C158D0058FA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B4E1C8C158D0058FA8B /* ViewController.swift */; };
 		30FC5B521C8C158D0058FA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FC5B501C8C158D0058FA8B /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3036515E1C8F0E5300937CFB /* DiscountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountTests.swift; sourceTree = "<group>"; };
+		303651601C8F101400937CFB /* PercentOffDiscountTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentOffDiscountTest.swift; sourceTree = "<group>"; };
 		30FC5B491C8C158D0058FA8B /* LXCashRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXCashRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30FC5B4E1C8C158D0058FA8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 			children = (
 				30FC5B661C8C158D0058FA8B /* Info.plist */,
 				30FC5B7E1C8C33A40058FA8B /* ItemTests.swift */,
+				3036515E1C8F0E5300937CFB /* DiscountTests.swift */,
+				303651601C8F101400937CFB /* PercentOffDiscountTest.swift */,
 			);
 			path = LXCashRegisterTests;
 			sourceTree = "<group>";
@@ -254,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3036515F1C8F0E5300937CFB /* DiscountTests.swift in Sources */,
 				30FC5B7F1C8C33A40058FA8B /* ItemTests.swift in Sources */,
+				303651611C8F101400937CFB /* PercentOffDiscountTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +444,7 @@
 				30FC5B6B1C8C158D0058FA8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30FC5B6C1C8C158D0058FA8B /* Build configuration list for PBXNativeTarget "LXCashRegisterTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +453,7 @@
 				30FC5B6E1C8C158D0058FA8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
