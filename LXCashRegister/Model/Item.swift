@@ -15,6 +15,7 @@ class Item: NSManagedObject {
     @NSManaged private(set) var barCode: String!
     @NSManaged private(set) var name: String!
     @NSManaged private(set) var price: NSNumber!
+    @NSManaged private(set) var unit: String!
     @NSManaged private(set) var discounts: [Discount]!
     
     init?(json: AnyObject?) {
@@ -24,7 +25,8 @@ class Item: NSManagedObject {
         guard let json = json as? [String: AnyObject],
             barCode   = json["barCode"] as? String,
             name        = json["name"] as? String,
-            price       = json["price"] as? Double
+            price       = json["price"] as? Double,
+            unit       = json["unit"] as? String
             else {
                 return nil
         }
@@ -32,6 +34,7 @@ class Item: NSManagedObject {
         self.barCode    = barCode
         self.name       = name
         self.price      = price
+        self.unit       = unit
         self.discounts  = Discount.createDiscountArray(json: json["discounts"])
     }
     

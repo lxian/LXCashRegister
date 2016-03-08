@@ -15,6 +15,7 @@ class ItemTests: XCTestCase {
     static let TestItemJsonDict:[String: AnyObject] = ["barCode": "ITEM9999999",
                             "name": "someItem",
                             "price": 99,
+                            "unit": "kg",
                             "discounts": [
                                 [
                                     "type": 0,
@@ -48,6 +49,7 @@ class ItemTests: XCTestCase {
             XCTAssertEqual(item.barCode, ItemTests.TestItemBarCode, "Item property barCode is not created correctly, actual \(item.barCode)")
             XCTAssertEqual(item.name, ItemTests.TestItemJsonDict["name"] as? String, "Item property name is not created correctly, actual \(item.name)")
             XCTAssertEqual(item.price, ItemTests.TestItemJsonDict["price"] as? NSNumber, "Item property price is not created correctly, actual \(item.price)")
+            XCTAssertEqual(item.unit, ItemTests.TestItemJsonDict["unit"] as? String, "Item property unit is not created correctly, actual \(item.unit)")
             
             XCTAssertNotNil(item.discounts[0] as? BuyTwoGetOneDiscount, "Item property discount[0] (BuyTwoGetOneDiscount) is not created correctly ")
             XCTAssertEqual((item.discounts[1] as! PercentOffDiscount).offPercent, 5, "Item property discount[0] (PercentOffDiscount)is not created correctly, actual \((item.discounts[1] as! PercentOffDiscount).offPercent)")
