@@ -1,0 +1,31 @@
+[{
+ 
+ "barCode": "ITEM0000000",
+ "name": "苹果",
+ "unit": "斤",
+ "price": 1
+ }, {
+ 
+ "barCode": "ITEM0000001",
+ "name": "可口可乐",
+ "price": 3,
+ "unit": "罐",
+ "discounts": [{
+               "type": 0,
+               "offPercent": 5
+               }, {
+               "type": 1
+               }]
+ }, {
+ 
+ "barCode": "ITEM0000002",
+ "name": "羽毛球",
+ "price": 5,
+ "unit": "个",
+ "discounts": [{
+               "type": 0,
+               "offPercent": 5
+               }, {
+               "type": 1
+               }]
+ }]
