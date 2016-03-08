@@ -2,12 +2,11 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
     <entity name="Item" representedClassName="Item" syncable="YES">
         <attribute name="barCode" attributeType="String" indexed="YES" syncable="YES"/>
-        <attribute name="isBuyTwoGetOne" attributeType="Boolean" syncable="YES"/>
+        <attribute name="discounts" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="offPercent" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="price" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

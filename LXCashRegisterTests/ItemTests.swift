@@ -15,8 +15,15 @@ class ItemTests: XCTestCase {
     static let TestItemJsonDict:[String: AnyObject] = ["barCode": "ITEM9999999",
                             "name": "someItem",
                             "price": 99,
-                            "offPercent": 5,
-                            "isBuyTwoGetOne": 1]
+                            "discount": [
+                                [
+                                    "type": 0,
+                                    "offPercent": 5
+                                ],
+                                [
+                                    "type": 1
+                                ]
+                            ]]
     var createdItems = [Item?]()
     
     override func setUp() {
@@ -40,15 +47,13 @@ class ItemTests: XCTestCase {
             XCTAssertEqual(item.barCode, ItemTests.TestItemBarCode, "Item property barCode is not created correctly, actual\(item.barCode)")
             XCTAssertEqual(item.name, ItemTests.TestItemJsonDict["name"] as? String, "Item property name is not created correctly, actual\(item.name)")
             XCTAssertEqual(item.price, ItemTests.TestItemJsonDict["price"] as? NSNumber, "Item property price is not created correctly, actual\(item.price)")
-            XCTAssertEqual(item.offPercent, ItemTests.TestItemJsonDict["offPercent"] as? NSNumber, "Item property offPercent is not created correctly, actual\(item.offPercent)")
-            XCTAssertEqual(item.isBuyTwoGetOne, ItemTests.TestItemJsonDict["isBuyTwoGetOne"] as? NSNumber, "Item property isBuyTwoGetOne is not created correctly, actual\(item.isBuyTwoGetOne)")
         }
         
         createdItems.append(item)
     }
     
     func testItemCreatingFailingOnInvalidJson() {
-        ItemTests.TestItemJsonDict.keys.forEach { key in
+        ["barCode", "name", "price"].forEach { key in
             var json = ItemTests.TestItemJsonDict
             json.removeValueForKey(key)
             let item = Item(json: json)

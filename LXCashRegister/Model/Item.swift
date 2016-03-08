@@ -15,8 +15,7 @@ class Item: NSManagedObject {
     @NSManaged private(set) var barCode: String!
     @NSManaged private(set) var name: String!
     @NSManaged private(set) var price: NSNumber!
-    @NSManaged private(set) var offPercent: NSNumber!
-    @NSManaged private(set) var isBuyTwoGetOne: NSNumber!
+    @NSManaged private(set) var discounts: [Discount]!
     
     init?(json: [String: AnyObject]) {
         let entity = NSEntityDescription.entityForName(Item.EntityName, inManagedObjectContext: CoreDataStack.sharedInstance.managedObjectContext)!
@@ -24,9 +23,7 @@ class Item: NSManagedObject {
         
         guard let barCode   = json["barCode"] as? String,
             name        = json["name"] as? String,
-            price       = json["price"] as? Double,
-            offPercent  = json["offPercent"] as? Double,
-            isBuyTwoGetOne = json["isBuyTwoGetOne"] as? Bool
+            price       = json["price"] as? Double
             else {
                 return nil
         }
@@ -34,8 +31,7 @@ class Item: NSManagedObject {
         self.barCode    = barCode
         self.name       = name
         self.price      = price
-        self.offPercent = offPercent
-        self.isBuyTwoGetOne = isBuyTwoGetOne
+        self.discounts  = Discount.createDiscountArray(json["discounts"])
     }
     
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
@@ -46,7 +42,5 @@ class Item: NSManagedObject {
 func ==(left: Item, right: Item) -> Bool {
     return left.barCode == right.barCode &&
             left.name == right.name &&
-            left.price == right.price &&
-            left.offPercent == right.offPercent &&
-            left.isBuyTwoGetOne == right.isBuyTwoGetOne
+            left.price == right.price
 }

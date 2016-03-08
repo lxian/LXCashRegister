@@ -18,6 +18,9 @@
 		30FC5B7D1C8C2CD40058FA8B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B7C1C8C2CD40058FA8B /* CoreDataStack.swift */; };
 		30FC5B7F1C8C33A40058FA8B /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B7E1C8C33A40058FA8B /* ItemTests.swift */; };
 		30FC5B811C8C3A2A0058FA8B /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B801C8C3A2A0058FA8B /* ItemStore.swift */; };
+		30FC5B8B1C8DD1B00058FA8B /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B8A1C8DD1B00058FA8B /* Discount.swift */; };
+		30FC5B8D1C8DD4ED0058FA8B /* PercentOffDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B8C1C8DD4ED0058FA8B /* PercentOffDiscount.swift */; };
+		30FC5B8F1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B8E1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		30FC5B7C1C8C2CD40058FA8B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = Store/CoreDataStack.swift; sourceTree = "<group>"; };
 		30FC5B7E1C8C33A40058FA8B /* ItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 		30FC5B801C8C3A2A0058FA8B /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = Store/ItemStore.swift; sourceTree = "<group>"; };
+		30FC5B8A1C8DD1B00058FA8B /* Discount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Discount.swift; path = Model/Discount.swift; sourceTree = "<group>"; };
+		30FC5B8C1C8DD4ED0058FA8B /* PercentOffDiscount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PercentOffDiscount.swift; path = Model/PercentOffDiscount.swift; sourceTree = "<group>"; };
+		30FC5B8E1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuyTwoGetOneDiscount.swift; path = Model/BuyTwoGetOneDiscount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				30FC5B7A1C8C2CAC0058FA8B /* Item.swift */,
+				30FC5B8A1C8DD1B00058FA8B /* Discount.swift */,
+				30FC5B8C1C8DD4ED0058FA8B /* PercentOffDiscount.swift */,
+				30FC5B8E1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -229,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FC5B8D1C8DD4ED0058FA8B /* PercentOffDiscount.swift in Sources */,
 				30FC5B7D1C8C2CD40058FA8B /* CoreDataStack.swift in Sources */,
+				30FC5B8B1C8DD1B00058FA8B /* Discount.swift in Sources */,
 				30FC5B7B1C8C2CAC0058FA8B /* Item.swift in Sources */,
+				30FC5B8F1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift in Sources */,
 				30FC5B811C8C3A2A0058FA8B /* ItemStore.swift in Sources */,
 				30FC5B551C8C158D0058FA8B /* LXCashRegister.xcdatamodeld in Sources */,
 				30FC5B4F1C8C158D0058FA8B /* ViewController.swift in Sources */,
