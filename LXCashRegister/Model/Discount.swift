@@ -30,7 +30,7 @@ class Discount: NSObject, NSCoding {
         return ""
     }
     
-    class func createDiscountArray(json: AnyObject?) -> [Discount] {
+    class func createDiscountArray(json json: AnyObject?) -> [Discount] {
         guard let discountDictArr = json as? [[String: AnyObject]] else { return [] }
         var discountArray = [Discount]()
         discountDictArr.forEach { (discountDict) -> () in
