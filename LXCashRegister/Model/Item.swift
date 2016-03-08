@@ -17,11 +17,12 @@ class Item: NSManagedObject {
     @NSManaged private(set) var price: NSNumber!
     @NSManaged private(set) var discounts: [Discount]!
     
-    init?(json: [String: AnyObject]) {
+    init?(json: AnyObject?) {
         let entity = NSEntityDescription.entityForName(Item.EntityName, inManagedObjectContext: CoreDataStack.sharedInstance.managedObjectContext)!
         super.init(entity: entity, insertIntoManagedObjectContext: CoreDataStack.sharedInstance.managedObjectContext)
         
-        guard let barCode   = json["barCode"] as? String,
+        guard let json = json as? [String: AnyObject],
+            barCode   = json["barCode"] as? String,
             name        = json["name"] as? String,
             price       = json["price"] as? Double
             else {

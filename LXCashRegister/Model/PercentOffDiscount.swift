@@ -11,8 +11,9 @@ import UIKit
 class PercentOffDiscount: Discount {
     var offPercent: Double = 0
     
-    init?(json: [String: AnyObject]) {
-        guard let offPercent = json["offPercent"] as? Double
+    init?(json: AnyObject?) {
+        guard let json = json as? [String: AnyObject],
+            let offPercent = json["offPercent"] as? Double
             else {
                 super.init()
                 return nil
