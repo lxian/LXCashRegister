@@ -46,13 +46,13 @@ class ItemTests: XCTestCase {
         
         if let item = item {
             
-            XCTAssertEqual(item.barCode, ItemTests.TestItemBarCode, "Item property barCode is not created correctly, actual \(item.barCode)")
-            XCTAssertEqual(item.name, ItemTests.TestItemJsonDict["name"] as? String, "Item property name is not created correctly, actual \(item.name)")
-            XCTAssertEqual(item.price, ItemTests.TestItemJsonDict["price"] as? NSNumber, "Item property price is not created correctly, actual \(item.price)")
-            XCTAssertEqual(item.unit, ItemTests.TestItemJsonDict["unit"] as? String, "Item property unit is not created correctly, actual \(item.unit)")
+            XCTAssertEqual(item.barCode, ItemTests.TestItemBarCode, "Item property barCode is not created correctly")
+            XCTAssertEqual(item.name, ItemTests.TestItemJsonDict["name"] as? String, "Item property name is not created correctly")
+            XCTAssertEqual(item.price, ItemTests.TestItemJsonDict["price"] as? NSNumber, "Item property price is not created correctly")
+            XCTAssertEqual(item.unit, ItemTests.TestItemJsonDict["unit"] as? String, "Item property unit is not created correctly")
             
             XCTAssertNotNil(item.discounts[0] as? BuyTwoGetOneDiscount, "Item property discount[0] (BuyTwoGetOneDiscount) is not created correctly ")
-            XCTAssertEqual((item.discounts[1] as! PercentOffDiscount).offPercent, 5, "Item property discount[0] (PercentOffDiscount)is not created correctly, actual \((item.discounts[1] as! PercentOffDiscount).offPercent)")
+            XCTAssertEqual((item.discounts[1] as! PercentOffDiscount).offPercent, 5, "Item property discount[0] (PercentOffDiscount)is not created correctly")
         }
         
         createdItems.append(item)
@@ -74,7 +74,7 @@ class ItemTests: XCTestCase {
         ItemStore.fetchItem(barCode: ItemTests.TestItemBarCode)
         XCTAssertNotNil(fetchdItem, "Item fetching failed")
         if let item = item, fetchdItem = fetchdItem {
-            XCTAssert(item == fetchdItem, "Item fetched is not correct, expected: \(item.description), actual: \(fetchdItem.description)")
+            XCTAssert(item == fetchdItem, "Item fetched is not correct, expected")
         }
         createdItems.append(item)
         createdItems.append(fetchdItem)

@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+@objc(Item)
 class Item: NSManagedObject {
     static let EntityName = "Item"
     

@@ -31,7 +31,7 @@ class PercentOffDiscountTest: XCTestCase {
         XCTAssertNotNil(discount, "PercentOffDiscount not created")
         
         if let discount = discount {
-            XCTAssertEqual(discount.offPercent, 100, "PercentOffDiscount off precent not init correctly, actual \(discount.offPercent), expected 100")
+            XCTAssertEqual(discount.offPercent, 100, "PercentOffDiscount off precent not init correctly")
         }
     }
     

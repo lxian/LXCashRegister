@@ -33,7 +33,7 @@ class DiscountTests: XCTestCase {
     func testDiscountCreation() {
         let discounts = Discount.createDiscountArray(json: DiscountTests.TestJson)
         
-        XCTAssertTrue(discounts.count == 2, "Discount createDiscountArray fails, actual result = \(discounts)")
+        XCTAssertEqual(discounts.count, 2, "Discount createDiscountArray fails")
         XCTAssertTrue(discounts[0].pirority > discounts[1].pirority, "Discount createDiscountArray didn't sort the array on pirority, actual result \(discounts)")
     }
 }
