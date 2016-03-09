@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		3036515F1C8F0E5300937CFB /* DiscountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3036515E1C8F0E5300937CFB /* DiscountTests.swift */; };
 		303651611C8F101400937CFB /* PercentOffDiscountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303651601C8F101400937CFB /* PercentOffDiscountTest.swift */; };
+		303651651C8F13B600937CFB /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303651641C8F13B600937CFB /* Purchase.swift */; };
 		30BD65211C8F41A3009B215D /* TestingItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BD65201C8F41A3009B215D /* TestingItems.json */; };
+		30D209E51C8F18A4004401F8 /* PurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D209E41C8F18A4004401F8 /* PurchaseTests.swift */; };
 		30FC5B4D1C8C158D0058FA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */; };
 		30FC5B4F1C8C158D0058FA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B4E1C8C158D0058FA8B /* ViewController.swift */; };
 		30FC5B521C8C158D0058FA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FC5B501C8C158D0058FA8B /* Main.storyboard */; };
@@ -39,7 +41,9 @@
 /* Begin PBXFileReference section */
 		3036515E1C8F0E5300937CFB /* DiscountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountTests.swift; sourceTree = "<group>"; };
 		303651601C8F101400937CFB /* PercentOffDiscountTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentOffDiscountTest.swift; sourceTree = "<group>"; };
+		303651641C8F13B600937CFB /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Purchase.swift; path = Model/Purchase.swift; sourceTree = "<group>"; };
 		30BD65201C8F41A3009B215D /* TestingItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestingItems.json; sourceTree = "<group>"; };
+		30D209E41C8F18A4004401F8 /* PurchaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTests.swift; sourceTree = "<group>"; };
 		30FC5B491C8C158D0058FA8B /* LXCashRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXCashRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30FC5B4E1C8C158D0058FA8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303651631C8F134100937CFB /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Sample Data";
+			sourceTree = "<group>";
+		};
 		30FC5B401C8C158D0058FA8B = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */,
+				303651631C8F134100937CFB /* Sample Data */,
 				30FC5B791C8C2C890058FA8B /* Store */,
 				30FC5B6F1C8C17E20058FA8B /* Model */,
 				30FC5B4E1C8C158D0058FA8B /* ViewController.swift */,
@@ -122,6 +134,7 @@
 				30FC5B7E1C8C33A40058FA8B /* ItemTests.swift */,
 				3036515E1C8F0E5300937CFB /* DiscountTests.swift */,
 				303651601C8F101400937CFB /* PercentOffDiscountTest.swift */,
+				30D209E41C8F18A4004401F8 /* PurchaseTests.swift */,
 			);
 			path = LXCashRegisterTests;
 			sourceTree = "<group>";
@@ -133,6 +146,7 @@
 				30FC5B8A1C8DD1B00058FA8B /* Discount.swift */,
 				30FC5B8C1C8DD4ED0058FA8B /* PercentOffDiscount.swift */,
 				30FC5B8E1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift */,
+				303651641C8F13B600937CFB /* Purchase.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,6 +268,7 @@
 				30FC5B7B1C8C2CAC0058FA8B /* Item.swift in Sources */,
 				30FC5B8F1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift in Sources */,
 				30FC5B811C8C3A2A0058FA8B /* ItemStore.swift in Sources */,
+				303651651C8F13B600937CFB /* Purchase.swift in Sources */,
 				30FC5B551C8C158D0058FA8B /* LXCashRegister.xcdatamodeld in Sources */,
 				30FC5B4F1C8C158D0058FA8B /* ViewController.swift in Sources */,
 				30FC5B4D1C8C158D0058FA8B /* AppDelegate.swift in Sources */,
@@ -264,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D209E51C8F18A4004401F8 /* PurchaseTests.swift in Sources */,
 				3036515F1C8F0E5300937CFB /* DiscountTests.swift in Sources */,
 				30FC5B7F1C8C33A40058FA8B /* ItemTests.swift in Sources */,
 				303651611C8F101400937CFB /* PercentOffDiscountTest.swift in Sources */,
