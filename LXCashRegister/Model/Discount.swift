@@ -10,10 +10,16 @@ import UIKit
 
 class Discount: NSObject, NSCoding {
     var pirority: Int = 0
+    var type : DiscountType {
+        get {
+            return DiscountType.NoDiscount
+        }
+    }
     
     enum DiscountType: Int {
-        case PercentOff = 0
-        case BuyTwoGetOne = 1
+        case NoDiscount = 0
+        case PercentOff = 1
+        case BuyTwoGetOne = 2
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -27,12 +33,21 @@ class Discount: NSObject, NSCoding {
     }
     
     func statement(item item: Item, count: Int) -> String {
-        return ""
+        return Discount.commonStatement(item.name, count: count, unit: item.unit, price: item.price.doubleValue, total: item.price.doubleValue * Double(count)) + "\n"
+    }
+    
+    class func commonStatement(name: String, count: Int, unit: String, price: Double, total: Double) -> String {
+        return "名称：\(name)，数量：\(count)\(unit)，单价：\(price.formatToPrice())(元)，小计：\(total.formatToPrice())(元)"
+    }
+    
+    func savedMoney(item item: Item, count: Int) -> Double {
+        return 0
     }
     
     class func createDiscountArray(json json: AnyObject?) -> [Discount] {
-        guard let discountDictArr = json as? [[String: AnyObject]] else { return [] }
-        var discountArray = [Discount]()
+        var discountArray = [Discount()]
+        guard let discountDictArr = json as? [[String: AnyObject]] else { return discountArray}
+        
         discountDictArr.forEach { (discountDict) -> () in
             if let typeRaw = discountDict["type"] as? Int,
             let type = DiscountType(rawValue: typeRaw){
@@ -42,6 +57,8 @@ class Discount: NSObject, NSCoding {
                     discountArray.append(discount)
                 case .BuyTwoGetOne:
                     discountArray.append(BuyTwoGetOneDiscount())
+                case .NoDiscount:
+                    discountArray.append(Discount())
                 }
             }
         }

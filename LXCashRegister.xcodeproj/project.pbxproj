@@ -12,6 +12,11 @@
 		303651651C8F13B600937CFB /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303651641C8F13B600937CFB /* Purchase.swift */; };
 		30BD65211C8F41A3009B215D /* TestingItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BD65201C8F41A3009B215D /* TestingItems.json */; };
 		30D209E51C8F18A4004401F8 /* PurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D209E41C8F18A4004401F8 /* PurchaseTests.swift */; };
+		30D482DB1C90639A00E276F8 /* Double+PriceFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */; };
+		30D482DE1C906A2000E276F8 /* NormalStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482DD1C906A2000E276F8 /* NormalStatement.swift */; };
+		30D482E01C906A3700E276F8 /* FreeItemsStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482DF1C906A3700E276F8 /* FreeItemsStatement.swift */; };
+		30D482E41C906A5600E276F8 /* SummaryStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482E31C906A5600E276F8 /* SummaryStatement.swift */; };
+		30D482E61C906C6700E276F8 /* FullStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482E51C906C6700E276F8 /* FullStatement.swift */; };
 		30FC5B4D1C8C158D0058FA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */; };
 		30FC5B4F1C8C158D0058FA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FC5B4E1C8C158D0058FA8B /* ViewController.swift */; };
 		30FC5B521C8C158D0058FA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FC5B501C8C158D0058FA8B /* Main.storyboard */; };
@@ -44,6 +49,11 @@
 		303651641C8F13B600937CFB /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Purchase.swift; path = Model/Purchase.swift; sourceTree = "<group>"; };
 		30BD65201C8F41A3009B215D /* TestingItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestingItems.json; sourceTree = "<group>"; };
 		30D209E41C8F18A4004401F8 /* PurchaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTests.swift; sourceTree = "<group>"; };
+		30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+PriceFormat.swift"; path = "Extension/Double+PriceFormat.swift"; sourceTree = "<group>"; };
+		30D482DD1C906A2000E276F8 /* NormalStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalStatement.swift; path = Statement/NormalStatement.swift; sourceTree = "<group>"; };
+		30D482DF1C906A3700E276F8 /* FreeItemsStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeItemsStatement.swift; path = Statement/FreeItemsStatement.swift; sourceTree = "<group>"; };
+		30D482E31C906A5600E276F8 /* SummaryStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SummaryStatement.swift; path = Statement/SummaryStatement.swift; sourceTree = "<group>"; };
+		30D482E51C906C6700E276F8 /* FullStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullStatement.swift; path = Statement/FullStatement.swift; sourceTree = "<group>"; };
 		30FC5B491C8C158D0058FA8B /* LXCashRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXCashRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30FC5B4E1C8C158D0058FA8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +100,25 @@
 			name = "Sample Data";
 			sourceTree = "<group>";
 		};
+		30D482D91C90637600E276F8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		30D482DC1C9069EB00E276F8 /* Statement */ = {
+			isa = PBXGroup;
+			children = (
+				30D482DD1C906A2000E276F8 /* NormalStatement.swift */,
+				30D482DF1C906A3700E276F8 /* FreeItemsStatement.swift */,
+				30D482E31C906A5600E276F8 /* SummaryStatement.swift */,
+				30D482E51C906C6700E276F8 /* FullStatement.swift */,
+			);
+			name = Statement;
+			sourceTree = "<group>";
+		};
 		30FC5B401C8C158D0058FA8B = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */,
+				30D482DC1C9069EB00E276F8 /* Statement */,
+				30D482D91C90637600E276F8 /* Extension */,
 				303651631C8F134100937CFB /* Sample Data */,
 				30FC5B791C8C2C890058FA8B /* Store */,
 				30FC5B6F1C8C17E20058FA8B /* Model */,
@@ -263,12 +294,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				30FC5B8D1C8DD4ED0058FA8B /* PercentOffDiscount.swift in Sources */,
+				30D482E01C906A3700E276F8 /* FreeItemsStatement.swift in Sources */,
 				30FC5B7D1C8C2CD40058FA8B /* CoreDataStack.swift in Sources */,
+				30D482DE1C906A2000E276F8 /* NormalStatement.swift in Sources */,
 				30FC5B8B1C8DD1B00058FA8B /* Discount.swift in Sources */,
 				30FC5B7B1C8C2CAC0058FA8B /* Item.swift in Sources */,
 				30FC5B8F1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift in Sources */,
+				30D482E61C906C6700E276F8 /* FullStatement.swift in Sources */,
+				30D482DB1C90639A00E276F8 /* Double+PriceFormat.swift in Sources */,
 				30FC5B811C8C3A2A0058FA8B /* ItemStore.swift in Sources */,
 				303651651C8F13B600937CFB /* Purchase.swift in Sources */,
+				30D482E41C906A5600E276F8 /* SummaryStatement.swift in Sources */,
 				30FC5B551C8C158D0058FA8B /* LXCashRegister.xcdatamodeld in Sources */,
 				30FC5B4F1C8C158D0058FA8B /* ViewController.swift in Sources */,
 				30FC5B4D1C8C158D0058FA8B /* AppDelegate.swift in Sources */,

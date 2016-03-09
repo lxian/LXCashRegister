@@ -10,6 +10,11 @@ import UIKit
 
 class PercentOffDiscount: Discount {
     var offPercent: Double = 0
+    override var type : DiscountType {
+        get {
+            return DiscountType.PercentOff
+        }
+    }
     
     init?(json: AnyObject?) {
         guard let json = json as? [String: AnyObject],
@@ -33,6 +38,16 @@ class PercentOffDiscount: Discount {
     }
     
     override func statement(item item: Item, count: Int) -> String {
-        return "Not implmented"
+        let price = item.price.doubleValue
+        let total = price * Double(count) * (1 - offPercent)
+        let save  = savedMoney(item: item, count: count)
+        var statementString = Discount.commonStatement(item.name, count: count, unit: item.unit, price: price, total: total)
+        statementString += " 节省\(save.formatToPrice())(元)"
+        statementString += "\n"
+        return statementString
+    }
+    
+    override func savedMoney(item item: Item, count: Int) -> Double {
+        return item.price.doubleValue * Double(count) * offPercent
     }
 }

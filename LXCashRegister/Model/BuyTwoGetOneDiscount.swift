@@ -10,6 +10,11 @@ import UIKit
 
 class BuyTwoGetOneDiscount: Discount {
     let BuyTwoGetOneDiscountPirority = 1
+    override var type : DiscountType {
+        get {
+            return DiscountType.BuyTwoGetOne
+        }
+    }
     
     override init() {
         super.init()
@@ -22,10 +27,19 @@ class BuyTwoGetOneDiscount: Discount {
     }
     
     override func statement(item item: Item, count: Int) -> String {
-        return "Not implmented"
+        let price = item.price.doubleValue
+        let countIncludingFreeItems = count + (count / 2)
+        let total = price * Double(count)
+        let statementString = Discount.commonStatement(item.name, count: countIncludingFreeItems, unit: item.unit, price: price, total: total)
+        return statementString + "\n"
     }
     
-    func freeItemStatement(item item: Item, count: Int) -> String {
-        return "Not implemented"
+    func freeItemStatement(item item: Item, count: Int) -> String? {
+        if count < 2 { return nil }
+        return "名称：\(item.name)，数量：\(count / 2)瓶" + "\n"
+    }
+    
+    override func savedMoney(item item: Item, count: Int) -> Double {
+        return item.price.doubleValue * Double(count / 2)
     }
 }
