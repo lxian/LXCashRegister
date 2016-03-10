@@ -9,7 +9,9 @@
 import UIKit
 
 class BuyTwoGetOneDiscount: Discount {
-    let BuyTwoGetOneDiscountPirority = 1
+    override var pirority: Int {
+        return 2
+    }
     override var type : DiscountType {
         get {
             return DiscountType.BuyTwoGetOne
@@ -18,12 +20,10 @@ class BuyTwoGetOneDiscount: Discount {
     
     override init() {
         super.init()
-        pirority = BuyTwoGetOneDiscountPirority
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        pirority = BuyTwoGetOneDiscountPirority
     }
     
     override func statement(item item: Item, count: Int) -> String {

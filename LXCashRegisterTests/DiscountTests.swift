@@ -12,11 +12,11 @@ import XCTest
 class DiscountTests: XCTestCase {
     static let TestJson = [
         [
-            "type": 0,
+            "type": 1,
             "offPercent": 100
         ],
         [
-            "type": 1
+            "type": 2
         ]
     ]
     

@@ -10,6 +10,9 @@ import UIKit
 
 class PercentOffDiscount: Discount {
     var offPercent: Double = 0
+    override var pirority: Int {
+        return 1
+    }
     override var type : DiscountType {
         get {
             return DiscountType.PercentOff

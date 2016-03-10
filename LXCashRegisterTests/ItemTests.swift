@@ -18,11 +18,11 @@ class ItemTests: XCTestCase {
                             "unit": "kg",
                             "discounts": [
                                 [
-                                    "type": 0,
+                                    "type": 1,
                                     "offPercent": 5
                                 ],
                                 [
-                                    "type": 1
+                                    "type": 2
                                 ]
                             ]]
     var createdItems = [Item?]()

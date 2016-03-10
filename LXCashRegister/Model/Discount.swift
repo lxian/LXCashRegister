@@ -9,7 +9,9 @@
 import UIKit
 
 class Discount: NSObject, NSCoding {
-    var pirority: Int = 0
+    var pirority: Int {
+        return 0
+    }
     var type : DiscountType {
         get {
             return DiscountType.NoDiscount
@@ -45,9 +47,9 @@ class Discount: NSObject, NSCoding {
     }
     
     class func createDiscountArray(json json: AnyObject?) -> [Discount] {
-        var discountArray = [Discount()]
-        guard let discountDictArr = json as? [[String: AnyObject]] else { return discountArray}
+        guard let discountDictArr = json as? [[String: AnyObject]] else { return [Discount()]}
         
+        var discountArray = [Discount]()
         discountDictArr.forEach { (discountDict) -> () in
             if let typeRaw = discountDict["type"] as? Int,
             let type = DiscountType(rawValue: typeRaw){
@@ -63,6 +65,9 @@ class Discount: NSObject, NSCoding {
             }
         }
         
+        if discountArray.isEmpty {
+            discountArray.append(Discount())
+        }
         // sort by pirority, discount with a highest pirority will be at the first place of the array
         return discountArray.sort({ (left, right) -> Bool in
             left.pirority > right.pirority
