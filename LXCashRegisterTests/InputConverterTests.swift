@@ -32,7 +32,7 @@ class InputConverterTests: XCTestCase {
     }
     
     func testInputCoverterConvert() {
-        let dict = InputConverter.readFromFile(InputConverter.SampleInputOffPercentFileName) as! [String: Int]
-        XCTAssertEqual(dict["ITEM0000004"], 4, "Input Convert can't convert input correctly")
+        let input = InputConverter.readFromFile(InputConverter.SampleInputOffPercentFileName) as! [[String: AnyObject]]!
+        XCTAssertEqual(input[0]["count"] as! Int, 4, "Input Convert can't convert input correctly")
     }
 }

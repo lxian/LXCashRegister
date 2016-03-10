@@ -14,16 +14,16 @@ class InputConverter: NSObject {
     static let SampleInputBuyTwoGetOneFileName = "SampleInputBuyTwoGetOne"
     static let SampleInputBothDiscountFileName = "SampleInputBothDiscount"
     
-    class func readFromFile(fileName: String) -> [String : AnyObject]? {
+    class func readFromFile(fileName: String) -> [[String : AnyObject]]? {
         guard let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")
             else {
                 print("Faild to load testing sample input json file \(fileName)")
                 return nil
         }
-        return readFromFilePath(path)
+       return readFromFilePath(path)
     }
     
-    class func readFromFilePath(path: String) -> [String : AnyObject]? {
+    class func readFromFilePath(path: String) -> [[String : AnyObject]]? {
         guard let data = NSData(contentsOfFile: path) else {
             print("Faild to load sample input json file: \(path) into NSData")
             return nil
@@ -40,7 +40,7 @@ class InputConverter: NSObject {
         }
     }
     
-    private class func convert(json: AnyObject?) -> [String:AnyObject]? {
+    private class func convert(json: AnyObject?) -> [[String:AnyObject]]? {
         guard let json = json as? [String] else { return nil }
         var resultDict = [String:Int]()
         json.forEach { str in
@@ -57,6 +57,12 @@ class InputConverter: NSObject {
                 resultDict[barCode]! += count
             }
         }
-        return resultDict
+        
+        let result = Array(resultDict.keys).map({ (key) -> [String: AnyObject] in
+            [ "barCode": key,
+                "count": resultDict[key]!
+            ]
+        })
+        return result
     }
 }
