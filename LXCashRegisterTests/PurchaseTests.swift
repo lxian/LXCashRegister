@@ -24,33 +24,16 @@ class PurchaseTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        guard let path = NSBundle(forClass: PurchaseTests.classForCoder()).pathForResource("TestingItems", ofType: "json"),
-            data = NSData(contentsOfFile: path) else {
+        guard let path = NSBundle(forClass: PurchaseTests.classForCoder()).pathForResource("TestingItems", ofType: "json")
+            else {
                 print("Faild to load testing items json file into NSData")
                 return
         }
-        do {
-            guard let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [[String: AnyObject]] else {
-                print("Testing item json file invalid")
-                return
-            }
-            json.forEach { dict in
-                let _ = Item(json: dict)
-            }
-        } catch let error as NSError {
-            NSLog("Error while loading testing items json file, %@", error)
-        }
+        ItemStore.readSampleDataFromFilePath(path)
     }
     
     override func tearDown() {
-        let fetchRequest = NSFetchRequest(entityName: Item.EntityName)
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        
-        do {
-            try CoreDataStack.sharedInstance.persistentStoreCoordinator.executeRequest(deleteRequest, withContext: CoreDataStack.sharedInstance.managedObjectContext)
-        } catch let error as NSError {
-            NSLog("Error while remove all testing items, %@", error)
-        }
+        ItemStore.clearAllItems()
         super.tearDown()
     }
     
