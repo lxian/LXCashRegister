@@ -15,6 +15,8 @@
 		305004A71C91B08400C77808 /* SampleInputBuyTwoGetOne.json in Resources */ = {isa = PBXBuildFile; fileRef = 305004A61C91B08400C77808 /* SampleInputBuyTwoGetOne.json */; };
 		305004AB1C91B0B100C77808 /* SampleInputBothDiscount.json in Resources */ = {isa = PBXBuildFile; fileRef = 305004AA1C91B0B100C77808 /* SampleInputBothDiscount.json */; };
 		30BD65211C8F41A3009B215D /* TestingItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BD65201C8F41A3009B215D /* TestingItems.json */; };
+		30BEA18A1C91B2B300B78FF0 /* InputConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEA1891C91B2B300B78FF0 /* InputConverter.swift */; };
+		30BEA18C1C91B86700B78FF0 /* InputConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEA18B1C91B86700B78FF0 /* InputConverterTests.swift */; };
 		30D209E51C8F18A4004401F8 /* PurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D209E41C8F18A4004401F8 /* PurchaseTests.swift */; };
 		30D482DB1C90639A00E276F8 /* Double+PriceFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */; };
 		30D482DE1C906A2000E276F8 /* NormalStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482DD1C906A2000E276F8 /* NormalStatement.swift */; };
@@ -57,6 +59,8 @@
 		305004A61C91B08400C77808 /* SampleInputBuyTwoGetOne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleInputBuyTwoGetOne.json; path = SampleInput/SampleInputBuyTwoGetOne.json; sourceTree = "<group>"; };
 		305004AA1C91B0B100C77808 /* SampleInputBothDiscount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleInputBothDiscount.json; path = SampleInput/SampleInputBothDiscount.json; sourceTree = "<group>"; };
 		30BD65201C8F41A3009B215D /* TestingItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestingItems.json; sourceTree = "<group>"; };
+		30BEA1891C91B2B300B78FF0 /* InputConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputConverter.swift; path = Store/InputConverter.swift; sourceTree = "<group>"; };
+		30BEA18B1C91B86700B78FF0 /* InputConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputConverterTests.swift; sourceTree = "<group>"; };
 		30D209E41C8F18A4004401F8 /* PurchaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTests.swift; sourceTree = "<group>"; };
 		30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+PriceFormat.swift"; path = "Extension/Double+PriceFormat.swift"; sourceTree = "<group>"; };
 		30D482DD1C906A2000E276F8 /* NormalStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalStatement.swift; path = Statement/NormalStatement.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				3036515E1C8F0E5300937CFB /* DiscountTests.swift */,
 				303651601C8F101400937CFB /* PercentOffDiscountTest.swift */,
 				30D209E41C8F18A4004401F8 /* PurchaseTests.swift */,
+				30BEA18B1C91B86700B78FF0 /* InputConverterTests.swift */,
 			);
 			path = LXCashRegisterTests;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			children = (
 				30FC5B7C1C8C2CD40058FA8B /* CoreDataStack.swift */,
 				30FC5B801C8C3A2A0058FA8B /* ItemStore.swift */,
+				30BEA1891C91B2B300B78FF0 /* InputConverter.swift */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 				30FC5B8B1C8DD1B00058FA8B /* Discount.swift in Sources */,
 				30FC5B7B1C8C2CAC0058FA8B /* Item.swift in Sources */,
 				30FC5B8F1C8DD90B0058FA8B /* BuyTwoGetOneDiscount.swift in Sources */,
+				30BEA18A1C91B2B300B78FF0 /* InputConverter.swift in Sources */,
 				30D482E61C906C6700E276F8 /* FullStatement.swift in Sources */,
 				30D482DB1C90639A00E276F8 /* Double+PriceFormat.swift in Sources */,
 				30FC5B811C8C3A2A0058FA8B /* ItemStore.swift in Sources */,
@@ -347,6 +354,7 @@
 				3036515F1C8F0E5300937CFB /* DiscountTests.swift in Sources */,
 				30FC5B7F1C8C33A40058FA8B /* ItemTests.swift in Sources */,
 				303651611C8F101400937CFB /* PercentOffDiscountTest.swift in Sources */,
+				30BEA18C1C91B86700B78FF0 /* InputConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
