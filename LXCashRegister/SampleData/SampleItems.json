@@ -11,10 +11,10 @@
  "price": 3,
  "unit": "瓶",
  "discounts": [{
-               "type": 0,
+               "type": 1,
                "offPercent": 5
                }, {
-               "type": 1
+               "type": 2
                }]
  }, {
  
@@ -23,10 +23,10 @@
  "price": 1,
  "unit": "个",
  "discounts": [{
-               "type": 0,
+               "type": 1,
                "offPercent": 5
                }, {
-               "type": 1
+               "type": 2
                }]
  }, {
  
@@ -35,7 +35,7 @@
  "price": 2,
  "unit": "个",
  "discounts": [{
-               "type": 1
+               "type": 2
                }]
  }, {
  
@@ -44,7 +44,7 @@
  "price": 100,
  "unit": "副",
  "discounts": [{
-               "type": 0,
+               "type": 1,
                "offPercent": 5
                }]
  }, {

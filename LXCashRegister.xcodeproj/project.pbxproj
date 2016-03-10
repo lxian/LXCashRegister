@@ -10,6 +10,10 @@
 		3036515F1C8F0E5300937CFB /* DiscountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3036515E1C8F0E5300937CFB /* DiscountTests.swift */; };
 		303651611C8F101400937CFB /* PercentOffDiscountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303651601C8F101400937CFB /* PercentOffDiscountTest.swift */; };
 		303651651C8F13B600937CFB /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303651641C8F13B600937CFB /* Purchase.swift */; };
+		305004A11C91B03100C77808 /* SampleInputNoDiscount.json in Resources */ = {isa = PBXBuildFile; fileRef = 305004A01C91B03100C77808 /* SampleInputNoDiscount.json */; };
+		305004A51C91B06E00C77808 /* SampleInputOffPercent.json in Resources */ = {isa = PBXBuildFile; fileRef = 305004A41C91B06E00C77808 /* SampleInputOffPercent.json */; };
+		305004A71C91B08400C77808 /* SampleInputBuyTwoGetOne.json in Resources */ = {isa = PBXBuildFile; fileRef = 305004A61C91B08400C77808 /* SampleInputBuyTwoGetOne.json */; };
+		305004AB1C91B0B100C77808 /* SampleInputBothDiscount.json in Resources */ = {isa = PBXBuildFile; fileRef = 305004AA1C91B0B100C77808 /* SampleInputBothDiscount.json */; };
 		30BD65211C8F41A3009B215D /* TestingItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BD65201C8F41A3009B215D /* TestingItems.json */; };
 		30D209E51C8F18A4004401F8 /* PurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D209E41C8F18A4004401F8 /* PurchaseTests.swift */; };
 		30D482DB1C90639A00E276F8 /* Double+PriceFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */; };
@@ -48,6 +52,10 @@
 		3036515E1C8F0E5300937CFB /* DiscountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountTests.swift; sourceTree = "<group>"; };
 		303651601C8F101400937CFB /* PercentOffDiscountTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentOffDiscountTest.swift; sourceTree = "<group>"; };
 		303651641C8F13B600937CFB /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Purchase.swift; path = Model/Purchase.swift; sourceTree = "<group>"; };
+		305004A01C91B03100C77808 /* SampleInputNoDiscount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleInputNoDiscount.json; path = SampleInput/SampleInputNoDiscount.json; sourceTree = "<group>"; };
+		305004A41C91B06E00C77808 /* SampleInputOffPercent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleInputOffPercent.json; path = SampleInput/SampleInputOffPercent.json; sourceTree = "<group>"; };
+		305004A61C91B08400C77808 /* SampleInputBuyTwoGetOne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleInputBuyTwoGetOne.json; path = SampleInput/SampleInputBuyTwoGetOne.json; sourceTree = "<group>"; };
+		305004AA1C91B0B100C77808 /* SampleInputBothDiscount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleInputBothDiscount.json; path = SampleInput/SampleInputBothDiscount.json; sourceTree = "<group>"; };
 		30BD65201C8F41A3009B215D /* TestingItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestingItems.json; sourceTree = "<group>"; };
 		30D209E41C8F18A4004401F8 /* PurchaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTests.swift; sourceTree = "<group>"; };
 		30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+PriceFormat.swift"; path = "Extension/Double+PriceFormat.swift"; sourceTree = "<group>"; };
@@ -103,6 +111,17 @@
 			name = "Sample Data";
 			sourceTree = "<group>";
 		};
+		3050049F1C91AFE600C77808 /* Sample Input */ = {
+			isa = PBXGroup;
+			children = (
+				305004A01C91B03100C77808 /* SampleInputNoDiscount.json */,
+				305004A41C91B06E00C77808 /* SampleInputOffPercent.json */,
+				305004A61C91B08400C77808 /* SampleInputBuyTwoGetOne.json */,
+				305004AA1C91B0B100C77808 /* SampleInputBothDiscount.json */,
+			);
+			name = "Sample Input";
+			sourceTree = "<group>";
+		};
 		30D482D91C90637600E276F8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +166,7 @@
 				30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */,
 				30D482DC1C9069EB00E276F8 /* Statement */,
 				30D482D91C90637600E276F8 /* Extension */,
+				3050049F1C91AFE600C77808 /* Sample Input */,
 				303651631C8F134100937CFB /* Sample Data */,
 				30FC5B791C8C2C890058FA8B /* Store */,
 				30FC5B6F1C8C17E20058FA8B /* Model */,
@@ -275,10 +295,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				305004A71C91B08400C77808 /* SampleInputBuyTwoGetOne.json in Resources */,
 				30D482E81C908CB400E276F8 /* SampleItems.json in Resources */,
+				305004A11C91B03100C77808 /* SampleInputNoDiscount.json in Resources */,
+				305004A51C91B06E00C77808 /* SampleInputOffPercent.json in Resources */,
 				30FC5B5A1C8C158D0058FA8B /* LaunchScreen.storyboard in Resources */,
 				30FC5B571C8C158D0058FA8B /* Assets.xcassets in Resources */,
 				30FC5B521C8C158D0058FA8B /* Main.storyboard in Resources */,
+				305004AB1C91B0B100C77808 /* SampleInputBothDiscount.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
