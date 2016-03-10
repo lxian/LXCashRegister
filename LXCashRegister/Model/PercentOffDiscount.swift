@@ -26,7 +26,7 @@ class PercentOffDiscount: Discount {
                 super.init()
                 return nil
         }
-        self.offPercent = offPercent
+        self.offPercent = offPercent / 100
         super.init()
     }
     

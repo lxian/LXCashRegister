@@ -11,7 +11,7 @@ import XCTest
 
 class PercentOffDiscountTest: XCTestCase {
     static let TestJson = [
-            "type": 0,
+            "type": 1,
             "offPercent": 100
         ]
     
@@ -31,7 +31,7 @@ class PercentOffDiscountTest: XCTestCase {
         XCTAssertNotNil(discount, "PercentOffDiscount not created")
         
         if let discount = discount {
-            XCTAssertEqual(discount.offPercent, 100, "PercentOffDiscount off precent not init correctly")
+            XCTAssertEqual(discount.offPercent, 1, "PercentOffDiscount off precent not init correctly")
         }
     }
     

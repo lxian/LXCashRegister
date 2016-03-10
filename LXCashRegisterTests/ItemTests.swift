@@ -52,7 +52,7 @@ class ItemTests: XCTestCase {
             XCTAssertEqual(item.unit, ItemTests.TestItemJsonDict["unit"] as? String, "Item property unit is not created correctly")
             
             XCTAssertNotNil(item.discounts[0] as? BuyTwoGetOneDiscount, "Item property discount[0] (BuyTwoGetOneDiscount) is not created correctly ")
-            XCTAssertEqual((item.discounts[1] as! PercentOffDiscount).offPercent, 5, "Item property discount[0] (PercentOffDiscount)is not created correctly")
+            XCTAssertEqual((item.discounts[1] as! PercentOffDiscount).offPercent, 0.05, "Item property discount[0] (PercentOffDiscount)is not created correctly")
         }
         
         createdItems.append(item)
