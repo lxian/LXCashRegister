@@ -17,6 +17,10 @@
 		30BD65211C8F41A3009B215D /* TestingItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BD65201C8F41A3009B215D /* TestingItems.json */; };
 		30BEA18A1C91B2B300B78FF0 /* InputConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEA1891C91B2B300B78FF0 /* InputConverter.swift */; };
 		30BEA18C1C91B86700B78FF0 /* InputConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEA18B1C91B86700B78FF0 /* InputConverterTests.swift */; };
+		30BEA1911C91BCF000B78FF0 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEA1901C91BCF000B78FF0 /* OutputViewController.swift */; };
+		30BEA1951C91BE0100B78FF0 /* InputSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEA1941C91BE0100B78FF0 /* InputSelectionTableViewController.swift */; };
+		30BEA1991C91BFF400B78FF0 /* InputSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEA1971C91BFF400B78FF0 /* InputSelectionTableViewCell.swift */; };
+		30BEA19A1C91BFF400B78FF0 /* InputSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30BEA1981C91BFF400B78FF0 /* InputSelectionTableViewCell.xib */; };
 		30D209E51C8F18A4004401F8 /* PurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D209E41C8F18A4004401F8 /* PurchaseTests.swift */; };
 		30D482DB1C90639A00E276F8 /* Double+PriceFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */; };
 		30D482DE1C906A2000E276F8 /* NormalStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D482DD1C906A2000E276F8 /* NormalStatement.swift */; };
@@ -61,6 +65,10 @@
 		30BD65201C8F41A3009B215D /* TestingItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestingItems.json; sourceTree = "<group>"; };
 		30BEA1891C91B2B300B78FF0 /* InputConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputConverter.swift; path = Store/InputConverter.swift; sourceTree = "<group>"; };
 		30BEA18B1C91B86700B78FF0 /* InputConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputConverterTests.swift; sourceTree = "<group>"; };
+		30BEA1901C91BCF000B78FF0 /* OutputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutputViewController.swift; path = ViewController/OutputViewController.swift; sourceTree = "<group>"; };
+		30BEA1941C91BE0100B78FF0 /* InputSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputSelectionTableViewController.swift; path = ViewController/InputSelectionTableViewController.swift; sourceTree = "<group>"; };
+		30BEA1971C91BFF400B78FF0 /* InputSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputSelectionTableViewCell.swift; path = Cell/InputSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		30BEA1981C91BFF400B78FF0 /* InputSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputSelectionTableViewCell.xib; path = Cell/InputSelectionTableViewCell.xib; sourceTree = "<group>"; };
 		30D209E41C8F18A4004401F8 /* PurchaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTests.swift; sourceTree = "<group>"; };
 		30D482DA1C90639A00E276F8 /* Double+PriceFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+PriceFormat.swift"; path = "Extension/Double+PriceFormat.swift"; sourceTree = "<group>"; };
 		30D482DD1C906A2000E276F8 /* NormalStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalStatement.swift; path = Statement/NormalStatement.swift; sourceTree = "<group>"; };
@@ -126,6 +134,24 @@
 			name = "Sample Input";
 			sourceTree = "<group>";
 		};
+		30BEA18D1C91BCB900B78FF0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30BEA1901C91BCF000B78FF0 /* OutputViewController.swift */,
+				30BEA1941C91BE0100B78FF0 /* InputSelectionTableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		30BEA1961C91BFD700B78FF0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				30BEA1971C91BFF400B78FF0 /* InputSelectionTableViewCell.swift */,
+				30BEA1981C91BFF400B78FF0 /* InputSelectionTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		30D482D91C90637600E276F8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				30FC5B4C1C8C158D0058FA8B /* AppDelegate.swift */,
+				30BEA1961C91BFD700B78FF0 /* Cell */,
+				30BEA18D1C91BCB900B78FF0 /* ViewController */,
 				30D482DC1C9069EB00E276F8 /* Statement */,
 				30D482D91C90637600E276F8 /* Extension */,
 				3050049F1C91AFE600C77808 /* Sample Input */,
@@ -303,6 +331,7 @@
 			files = (
 				305004A71C91B08400C77808 /* SampleInputBuyTwoGetOne.json in Resources */,
 				30D482E81C908CB400E276F8 /* SampleItems.json in Resources */,
+				30BEA19A1C91BFF400B78FF0 /* InputSelectionTableViewCell.xib in Resources */,
 				305004A11C91B03100C77808 /* SampleInputNoDiscount.json in Resources */,
 				305004A51C91B06E00C77808 /* SampleInputOffPercent.json in Resources */,
 				30FC5B5A1C8C158D0058FA8B /* LaunchScreen.storyboard in Resources */,
@@ -330,6 +359,7 @@
 				30FC5B8D1C8DD4ED0058FA8B /* PercentOffDiscount.swift in Sources */,
 				30D482E01C906A3700E276F8 /* FreeItemsStatement.swift in Sources */,
 				30FC5B7D1C8C2CD40058FA8B /* CoreDataStack.swift in Sources */,
+				30BEA1991C91BFF400B78FF0 /* InputSelectionTableViewCell.swift in Sources */,
 				30D482DE1C906A2000E276F8 /* NormalStatement.swift in Sources */,
 				30FC5B8B1C8DD1B00058FA8B /* Discount.swift in Sources */,
 				30FC5B7B1C8C2CAC0058FA8B /* Item.swift in Sources */,
@@ -339,8 +369,10 @@
 				30D482DB1C90639A00E276F8 /* Double+PriceFormat.swift in Sources */,
 				30FC5B811C8C3A2A0058FA8B /* ItemStore.swift in Sources */,
 				303651651C8F13B600937CFB /* Purchase.swift in Sources */,
+				30BEA1911C91BCF000B78FF0 /* OutputViewController.swift in Sources */,
 				30D482E41C906A5600E276F8 /* SummaryStatement.swift in Sources */,
 				30FC5B551C8C158D0058FA8B /* LXCashRegister.xcdatamodeld in Sources */,
+				30BEA1951C91BE0100B78FF0 /* InputSelectionTableViewController.swift in Sources */,
 				30FC5B4F1C8C158D0058FA8B /* ViewController.swift in Sources */,
 				30FC5B4D1C8C158D0058FA8B /* AppDelegate.swift in Sources */,
 			);

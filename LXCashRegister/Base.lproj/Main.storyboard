@@ -1,26 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZDy-zm-Yya">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Input Selection Table View Controller-->
+        <scene sceneID="iR5-1o-39a">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LXCashRegister" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="FIM-WV-RMs" customClass="InputSelectionTableViewController" customModule="LXCashRegister" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vCf-Df-SeB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="yhS-Wk-gvV">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yhS-Wk-gvV" id="snq-32-5iN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="YCa-cX-IzI" kind="show" identifier="inputSelectionTableShowOutputViewSegue" id="8dZ-XF-ctT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FIM-WV-RMs" id="GIp-bg-pBP"/>
+                            <outlet property="delegate" destination="FIM-WV-RMs" id="StR-vE-2Qz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="OAo-1H-J7G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hPR-00-Ejz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1093" y="-217"/>
+        </scene>
+        <!--Output View Controller-->
+        <scene sceneID="RWD-AO-Qq2">
+            <objects>
+                <viewController id="YCa-cX-IzI" customClass="OutputViewController" customModule="LXCashRegister" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZXd-sb-2rh"/>
+                        <viewControllerLayoutGuide type="bottom" id="GjF-mV-Z1O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bKS-wn-ss4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EMd-nh-0am">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EMd-nh-0am" firstAttribute="centerX" secondItem="bKS-wn-ss4" secondAttribute="centerX" id="KGt-SF-z0F"/>
+                            <constraint firstItem="EMd-nh-0am" firstAttribute="width" secondItem="bKS-wn-ss4" secondAttribute="width" id="UQq-FH-ptv"/>
+                            <constraint firstItem="EMd-nh-0am" firstAttribute="height" secondItem="bKS-wn-ss4" secondAttribute="height" id="gOv-lH-657"/>
+                            <constraint firstItem="EMd-nh-0am" firstAttribute="centerY" secondItem="bKS-wn-ss4" secondAttribute="centerY" id="ouC-O0-odH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outputTextView" destination="EMd-nh-0am" id="yJ5-7R-6Wz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATn-6s-etB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="-217"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OhJ-1b-Ifw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZDy-zm-Yya" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JNT-mW-I47">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FIM-WV-RMs" kind="relationship" relationship="rootViewController" id="hcj-34-A3y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGj-yJ-9vN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="-217"/>
         </scene>
     </scenes>
 </document>
