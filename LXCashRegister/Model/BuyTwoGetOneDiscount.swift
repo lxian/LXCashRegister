@@ -36,7 +36,7 @@ class BuyTwoGetOneDiscount: Discount {
     
     func freeItemStatement(item item: Item, count: Int) -> String? {
         if count < 2 { return nil }
-        return "名称：\(item.name)，数量：\(count / 2)瓶" + "\n"
+        return "名称：\(item.name)，数量：\(count / 2)\(item.unit)" + "\n"
     }
     
     override func savedMoney(item item: Item, count: Int) -> Double {
