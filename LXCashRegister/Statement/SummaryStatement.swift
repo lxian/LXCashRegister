@@ -18,7 +18,7 @@ class SummaryStatement: NSObject {
         guard let purchases = purchases else { return String(format: format, arguments: [0]) }
         
         let total = purchases.reduce(0) { (sum, p) -> Double in
-            sum + p.totalPrice
+            sum + (p.item.discounts.first ?? Discount()).totalPrice(item: p.item, count: p.count)
         }
         
         return String(format: format, arguments: [total])

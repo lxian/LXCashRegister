@@ -42,12 +42,16 @@ class PercentOffDiscount: Discount {
     
     override func statement(item item: Item, count: Int) -> String {
         let price = item.price.doubleValue
-        let total = price * Double(count) * (1 - offPercent)
+        let total = totalPrice(item: item, count: count)
         let save  = savedMoney(item: item, count: count)
         var statementString = Discount.commonStatement(item.name, count: count, unit: item.unit, price: price, total: total)
         statementString += " 节省\(save.formatToPrice())(元)"
         statementString += "\n"
         return statementString
+    }
+    
+    override func totalPrice(item item: Item, count: Int) -> Double {
+        return item.price.doubleValue * Double(count) * (1 - offPercent)
     }
     
     override func savedMoney(item item: Item, count: Int) -> Double {

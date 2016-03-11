@@ -42,6 +42,10 @@ class Discount: NSObject, NSCoding {
         return "名称：\(name)，数量：\(count)\(unit)，单价：\(price.formatToPrice())(元)，小计：\(total.formatToPrice())(元)"
     }
     
+    func totalPrice(item item: Item, count: Int) -> Double {
+        return Double(count) * item.price.doubleValue
+    }
+    
     func savedMoney(item item: Item, count: Int) -> Double {
         return 0
     }

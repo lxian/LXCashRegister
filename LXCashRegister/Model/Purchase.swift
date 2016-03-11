@@ -12,12 +12,6 @@ class Purchase: NSObject {
     var count: Int = 0
     var item: Item
     
-    var totalPrice: Double {
-        get {
-            return Double(count) * item.price.doubleValue
-        }
-    }
-    
     init?(json: AnyObject?) {
         guard let json = json as? [String: AnyObject],
             let count     = json["count"] as? Int,
